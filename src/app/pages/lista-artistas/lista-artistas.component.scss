@@ -1,0 +1,24 @@
+.list {
+    &__item {
+        background: #303030;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1em 0em;
+        padding: 1em;
+    }
+
+    &__image {
+        height: 10em;
+    }
+
+    &__details {
+        text-align: center;
+    }
+
+    &__generes {
+        display: flex; white-space: pre-wrap;
+    }
+
+}

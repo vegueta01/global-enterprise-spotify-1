@@ -1,0 +1,29 @@
+.artist {
+    padding: 2rem;
+    display: flex;
+    &__image {
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+    }
+    &__name {
+        margin:0 5rem;
+    }
+}
+
+.table {
+    width: 100%;
+    padding: 2rem;
+    &__tr {
+        &--head {
+            text-align: left;
+        }
+        &:hover {
+            background-color: #040404;
+        }
+        &>*{
+            padding: .5rem;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}

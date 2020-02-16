@@ -1,0 +1,20 @@
+<div class="content" *ngIf="!logged">
+  <a href="http://localhost:8888">
+    <div class="content__title">
+      <h1>Spotify</h1>
+      <p>presiona aquí para continuar <br> recuerda que debes tener arriba el backend web-api-auth-examples</p>
+
+    </div>
+  </a>
+</div>
+<div class="content" *ngIf="logged">
+  <h1 class="content__title">Spotify</h1>
+  <nav color="primary" class="content__menu">
+    <a mat-button routerLink="/lanzamientos" routerLinkActive>Lanzamientos</a>
+    /
+    <a mat-button routerLink="/artista" routerLinkActive>Artista</a>
+  </nav>
+  <div class="content__body">
+    <router-outlet></router-outlet>
+  </div>
+</div>
