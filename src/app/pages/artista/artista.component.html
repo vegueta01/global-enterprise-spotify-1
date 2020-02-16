@@ -1,0 +1,49 @@
+<div *ngIf="artist">
+    <div class="artist">
+        <img class="artist__image" [src]="artist.images[2].url" alt="">
+        <div class="artist__name">
+            <h2>
+                {{artist.name}}
+            </h2>
+            <a [href]="artist.external_urls.spotify">ir a la página del artista</a>
+        </div>
+    </div>
+
+    <div *ngIf="tracks">
+        <table class="table">
+            <thead>
+                <tr class="table__tr table__tr--head">
+                    <th>
+                        imágen
+                    </th>
+                    <th>
+                        album
+                    </th>
+                    <th>
+                        canción
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of tracks" class="table__tr">
+                    <td>
+                        <a [href]="item.album.external_urls.spotify">
+                            <img [src]="item.album.images[2].url" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a [href]="item.album.external_urls.spotify">
+                            {{item.album.name}}
+                        </a>
+                    </td>
+                    <td>
+                        <a [href]="item.external_urls.spotify">
+                            {{item.name}}
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="grid">
+    <div class="card" *ngFor="let album of albums; index as i">
+        <div class="card__content">
+            <div class="card__image-content">
+                <img class="card__image" [src]="album.images[0].url" alt="">
+            </div>
+            <div class="card__description">
+                <a [href]="album.external_urls.spotify">{{album.name}}</a>
+                <div>
+                    {{album.artists[0].name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

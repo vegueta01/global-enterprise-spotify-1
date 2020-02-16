@@ -1,0 +1,23 @@
+<ol class="list">
+    <a [routerLink]="'/artista/' + artist.id" *ngFor="let artist of artists">
+        <li class="list__item">
+            <div>
+                <img class="list__image" [src]="artist.images[2].url" alt="">
+            </div>
+
+            <div class="list__details">
+                {{artist.name}}
+                <div class="list__generes">
+                    (
+                    <div *ngFor="let genere of artist.genres">
+                        {{genere}},
+                    </div>
+                    )
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </li>
+    </a>
+</ol>

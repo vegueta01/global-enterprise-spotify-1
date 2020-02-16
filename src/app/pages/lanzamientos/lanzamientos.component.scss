@@ -1,0 +1,41 @@
+.grid {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill,minmax(164px,1fr));
+}
+
+.card {
+    position: relative;
+    padding: 20px 20px 16px;
+    background: #282828;
+    border-radius: 8px;
+    isolation: isolate;
+    &__content {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+    }
+
+    &__image-content {
+        height: 0;
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        margin-bottom: 16px;
+        background-color: #333;
+        box-shadow: 0 10px 30px 0 rgba(0,0,0,.3), 0 1px 2px 0 rgba(0,0,0,.2);
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__description {
+        min-height: 62px;
+    }
+}
